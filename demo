@@ -1,0 +1,23 @@
+class Minesweeper:
+    def __init__(self, tk_root, difficulty):
+        self.difficulty = difficulty
+        self.tk = tk_root
+        self.frame = tk.Frame(self.tk)
+        self.frame.pack()
+
+        # ... (rest of your code)
+
+def main():
+    window = tk.Tk()
+    window.title("Minesweeper")
+    minesweeper = Minesweeper(tk_root=window, difficulty="hard")
+    window.mainloop()
+
+if __name__ == "__main__":
+    main()
+The key change is to use tk_root instead of tk to avoid confusion with the module name tkinter. This way, you're passing the Tk instance as tk_root to your Minesweeper class constructor. This should resolve the import error.
+
+
+
+
+
